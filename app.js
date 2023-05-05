@@ -74,7 +74,7 @@ console.log(cuentaUsuario)
 
 //consigna
 alert(`La consigna es la siguiente, ${cuentaUsuario.nombre}`)
-alert(`Ingresas el nombre que le quieras asignar a tus gastos y luego, el monto de dinero que cuesta.`)
+alert(`Ingresas el nombre que le quieras asignar a tus gastos y luego, el monto de dinero que cuesta. Por ejemplo: "Alquiler".`)
 
 
 //Ciclo: genera un array con las deudas que el usuario quiera
