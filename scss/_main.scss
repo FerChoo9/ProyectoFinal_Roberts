@@ -1,0 +1,37 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    .main__message{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        border: 2px solid black;
+        border-radius: 20px;
+        width: 80%;
+        height: 12%;
+    }
+    .main__statistics{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80%;
+        margin-top: 20px;
+        .main__statistics-circlegraphics{
+            border: 2px solid black;
+            border-radius: 20px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .main__statistics-bargraphics{
+            border: 2px solid black;
+            border-radius: 20px;
+            height: 300px;
+        }
+    }    
+}
+.main__calendar{
+    border: 2px solid black;
+    border-radius: 15px;
+}

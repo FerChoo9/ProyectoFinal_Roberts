@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Breakwater";
+  src: url(../fonts/Breakwater.ttf);
+}
+@font-face {
+  font-family: Monoglyceride;
+  src: url(../fonts/Monoglyceride/Monoglyceride.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  grid-area: "header";
+}
+
+.nav {
+  grid-area: "nav";
+}
+
+.main {
+  grid-area: "main";
+}
+
+.footer {
+  grid-area: "footer";
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "nav main main__calendar" "nav main main__calendar" "nav main main__calendar";
+  margin: 0 30px 0 30px;
+}
+
+.header {
+  background-color: grey;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: normal;
+  width: 95%;
+  height: 45px;
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: grey 10px 10px 40px 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.header header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header header h1 {
+  font-family: Breakwater;
+  font-size: 32px;
+  font-weight: lighter;
+  color: white;
+  letter-spacing: 3px;
+  padding: 4px 0 0 20px;
+}
+.header header ul {
+  display: flex;
+  text-align: right;
+  list-style: none;
+  margin-right: 20px;
+  letter-spacing: 3px;
+}
+.header header ul li {
+  padding-right: 40px;
+  font-family: Monoglyceride;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav .nav__profile {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  border-radius: 30px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 40px 10px lightblue;
+  background-color: #145866;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav .nav__profile .nav__profile-photo {
+  display: flex;
+  position: relative;
+  left: 20px;
+  top: 15px;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+}
+.nav .nav__profile .nav__profile-name {
+  margin: 40px 0 0 10px;
+}
+.nav .nav__profile .nav__profile-name h2 {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.nav .nav__profile .nav__profile-email {
+  margin: 10px 0 0 10px;
+  letter-spacing: 1px;
+}
+.nav .nav__profile .nav__profile-email h3 {
+  font-size: 16px;
+}
+.nav .nav__sections {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 600px;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 30px;
+  background-color: azure;
+  box-shadow: #145866 10px 5px 40px 0px;
+}
+.nav .nav__sections ul {
+  list-style: none;
+  margin-top: 10px;
+}
+.nav .nav__sections ul li {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: 2px solid black;
+  width: 80%;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  align-items: center;
+  font-family: Monoglyceride;
+  font-size: 20px;
+}
+.nav .nav__sections ul li img {
+  padding-right: 15px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+.main .main__message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 80%;
+  height: 12%;
+}
+.main .main__statistics {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 20px;
+}
+.main .main__statistics .main__statistics-circlegraphics {
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+.main .main__statistics .main__statistics-bargraphics {
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 300px;
+}
+
+.main__calendar {
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
