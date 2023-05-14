@@ -34,9 +34,9 @@
             <div class="nav__sections">
                 <section>
                     <ul>
+                        <li class="nav__sections-item"><img src="./icons/data-analytics.png" alt="">    Análisis</li>
                         <li class="nav__sections-item"><img src="./icons/calendar-days.png" alt="">    Calendario</li>
                         <li class="nav__Sections-item"><img src="./icons/lista-de-tareas.png" alt="">    Tareas</li>
-                        <li class="nav__sections-item"><img src="./icons/data-analytics.png" alt="">    Análisis</li>
                         <li class="nav__sections-item"><img src="./icons/boton-circular-plus.png" alt="">agregar</li>
                     </ul>
                 </section>
@@ -45,29 +45,111 @@
         <div class="main">
             <div class="main__message">
                 <!-- Mensaje -->
-                <p>futura área de recordatorio. La página no pedirá datos personales o que comprometan la privacidad del usuario</p>
+                <p>Recuerda que desde LetsOrganize jamás te pediremos datos que comprometan tu privacidad e integridad como tarjetas de crédito o débito, contraseñas de cuentas externas, dirección domiciliar, etcétera.</p>
+                <img src="./sources/svg/undraw_projections_re_ulc6.svg" alt="" style="width: 90px; size: 90px;">
                 <!-- Mensaje -->
             </div>
             <div class="main__statistics">
                 <div class="main__statistics-circlegraphics">
-                    <!-- Gráfico circular -->
-                    <p>área destinada a la implementación de gráfico circular con descripción e interpretación de datos</p>
-                    <!-- Gráfico circular -->
+                    <div class="ByName">
+                        <!-- Gráfico circular -->
+                        <svg class="analytics-one" style="width: 250px; height:250px;">
+                            <circle r="121" cx="50%" cy="50%" pathlength="100"/>
+                            <circle r="79" cx="50%" cy="50%" pathlength="100"/>
+                            <circle r="100" cx="50%" cy="50%" pathlength="100"/>
+                        </svg>
+                        <!-- Gráfico circular -->
+                        <!-- Texto descripción -->
+                        <div class="main__statistics-circlegraphics-text">
+                            <h3>Análisis escrito</h3>
+                            <li>item1</li>
+                            <li>item1</li>
+                            <li>item1</li>
+                        </div>
+                        <!-- Texto descripción -->
+                    </div>
+                    <div class="ByClass">
+                        <!-- Gráfico circular -->
+                        <svg class="analytics-one" style="width: 250px; height:250px;">
+                            <circle r="121" cx="50%" cy="50%" pathlength="100"/>
+                            <circle r="79" cx="50%" cy="50%" pathlength="100"/>
+                            <circle r="100" cx="50%" cy="50%" pathlength="100"/>
+                        </svg>
+                        <!-- Gráfico circular -->
+                        <!-- Texto descripción -->
+                        <div class="main__statistics-circlegraphics-text">
+                            <h3>Análisis escrito</h3>
+                            <li>item1</li>
+                            <li>item1</li>
+                            <li>item1</li>
+                        </div>
+                        <!-- Texto descripción -->
+                    </div>
                 </div>
                 <div class="main__statistics-bargraphics">
                     <!-- Gráficos de barras -->
-                    <p>Area destinada para un gráfico de barras horizontales descriptivo de progreso / seguimiento</p>
+                    <div class="bargraphics">
+                        <h2>Gráfico de barras</h2>
+
+                        <div class="bargraphics-analytics">
+                            <div class="bargraphics-analytics-item">
+                                <div class="bargraphics-analytics-text">
+                                    <span>item1</span>
+                                    <span>**%</span>
+                                </div>
+                                <div class="bargraphics-analytics-bar">
+                                    <div id="item1-bar">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bargraphics-analytics-item">
+                                <div class="bargraphics-analytics-text">
+                                    <span>Item2</span>
+                                    <span>**%</span>
+                                </div>
+                                <div class="bargraphics-analytics-bar">
+                                    <div id="item2-bar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Gráficos de barras -->
                 </div>
             </div>
         </div>
         <div class="main__calendar">
             <!-- Calendario -->
-            <p>Área para calendario y agenda</p>
+            <h2>Ingreso de datos</h2>
+
+            <div class="main__calendar-title">
+                <div class="titulo">
+                    <h3>Nombre</h3>
+                </div>
+                <div class="titulo">
+                    <h3>precio</h3>
+                </div>
+                <div class="titulo">
+                    <h3>Clase</h3>
+                </div>
+            </div>
+
+            <div class="main__calendar-sections">
+                <div class="item">
+                    <input type="text" placeholder="Nombre" id="nombre">
+                </div>
+                <div class="item">
+                    <input type="text" placeholder="Precio" id="precio">
+                </div>
+                <div class="item">
+                    <input type="text" placeholder="Clase" id="clase">
+                </div>
+            </div>
             <!-- Calendario -->
         </div>
     </div>
+    
 
-    <script src="./app.js"></script>
+<!--     <script src="./app.js"></script> -->
 </body>
 </html>

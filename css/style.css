@@ -6,10 +6,22 @@
   font-family: Monoglyceride;
   src: url(../fonts/Monoglyceride/Monoglyceride.ttf);
 }
+@font-face {
+  font-family: fanwood;
+  src: url(../fonts/Fanwood/FanwoodText-Regular.ttf);
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  background-color: #212121;
+}
+
+body {
+  color: whitesmoke;
 }
 
 .header {
@@ -30,7 +42,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 300px auto 300px;
+  grid-template-columns: 18% auto 20%;
   grid-template-rows: auto auto auto;
   grid-template-areas: "nav main main__calendar" "nav main main__calendar" "nav main main__calendar";
   margin: 0 30px 0 30px;
@@ -60,7 +72,7 @@
   font-family: Breakwater;
   font-size: 32px;
   font-weight: lighter;
-  color: white;
+  color: whitesmoke;
   letter-spacing: 3px;
   padding: 4px 0 0 20px;
 }
@@ -76,7 +88,7 @@
   font-family: Monoglyceride;
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: whitesmoke;
 }
 
 .nav .nav__profile {
@@ -88,7 +100,7 @@
   border: 2px solid black;
   box-shadow: 5px 5px 40px 10px lightblue;
   background-color: #145866;
-  color: white;
+  color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
 }
 .nav .nav__profile .nav__profile-photo {
@@ -124,7 +136,8 @@
   border: 2px solid black;
   border-radius: 30px;
   background-color: azure;
-  box-shadow: #145866 10px 5px 40px 0px;
+  box-shadow: azure 10px 5px 40px 0px;
+  color: black;
 }
 .nav .nav__sections ul {
   list-style: none;
@@ -154,35 +167,133 @@
 }
 .main .main__message {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   margin: 0 auto;
   border: 2px solid black;
   border-radius: 20px;
-  width: 80%;
-  height: 12%;
+  width: 40%;
+  height: 125px;
+}
+.main .main__message p {
+  flex-grow: stretch;
+  margin-left: 10px;
+  font-family: fanwood;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 .main .main__statistics {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   margin-top: 20px;
+  text-align: left;
 }
 .main .main__statistics .main__statistics-circlegraphics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   border: 2px solid black;
   border-radius: 20px;
-  height: 300px;
+  height: auto;
   margin-bottom: 20px;
+  background-color: #121212;
+}
+.main .main__statistics .main__statistics-circlegraphics .ByName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px 0 30px 20px;
+}
+.main .main__statistics .main__statistics-circlegraphics .ByName .main__statistics-circlegraphics-text {
+  margin-left: 50px;
+}
+.main .main__statistics .main__statistics-circlegraphics .ByClass {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px 0 30px 20px;
+}
+.main .main__statistics .main__statistics-circlegraphics .ByClass .main__statistics-circlegraphics-text {
+  margin-left: 50px;
+}
+.main .main__statistics .main__statistics-circlegraphics svg circle {
+  fill: none;
+  stroke: whitesmoke;
+  stroke-width: 2px;
+  stroke-dasharray: 100, 0;
+  transform-origin: 50%;
+  transform: rotate(-90deg);
+}
+.main .main__statistics .main__statistics-circlegraphics svg circle:nth-child(3) {
+  fill: none;
+  stroke: #145866;
+  stroke-width: 40px;
+  stroke-dasharray: 100, 0;
+  transform-origin: 50%;
+  transform: rotate(-90deg);
 }
 .main .main__statistics .main__statistics-bargraphics {
   border: 2px solid black;
   border-radius: 20px;
   height: 300px;
+  background-color: #121212;
+  text-align: center;
+}
+.main .main__statistics .main__statistics-bargraphics .bargraphics-analytics .bargraphics-analytics-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 20px auto;
+  width: 80%;
+}
+.main .main__statistics .main__statistics-bargraphics .bargraphics-analytics .bargraphics-analytics-item .bargraphics-analytics-text {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.main .main__statistics .main__statistics-bargraphics .bargraphics-analytics .bargraphics-analytics-item .bargraphics-analytics-text span {
+  margin-right: 20px;
+}
+.main .main__statistics .main__statistics-bargraphics .bargraphics-analytics .bargraphics-analytics-item .bargraphics-analytics-bar div {
+  display: flex;
+  width: 80%;
+  height: 8px;
+  background-color: cyan;
 }
 
 .main__calendar {
+  width: auto;
   border: 2px solid black;
   border-radius: 15px;
+}
+.main__calendar h2 {
+  display: flex;
+  margin: 20px auto;
+}
+.main__calendar .main__calendar-title {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: space-evenly;
+}
+.main__calendar .main__calendar-sections {
+  display: flex;
+  flex-direction: row;
+  margin: 5px auto 5px auto;
+  width: 90%;
+}
+.main__calendar .main__calendar-sections .item input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 25px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: whitesmoke;
 }
 
 /*# sourceMappingURL=style.css.map */

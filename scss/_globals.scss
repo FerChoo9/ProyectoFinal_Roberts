@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    background-color: $background-color;
+}
+body{
+    color: $font-color;
+}
 .header{
     grid-area: "header";
 }
@@ -17,7 +23,7 @@
 }
 .container{
     display: grid;
-    grid-template-columns: 300px auto 300px;
+    grid-template-columns: 18% auto 20%;
     grid-template-rows: auto auto auto;
     grid-template-areas: 'nav main main__calendar'
     'nav main main__calendar'
