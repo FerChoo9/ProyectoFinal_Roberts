@@ -50,18 +50,20 @@
                 <!-- Mensaje -->
             </div>
             <div class="main__statistics">
+                <button id="analisis">Análisis</button>
                 <div class="main__statistics-circlegraphics">
                     <div class="ByName">
                         <!-- Gráfico circular -->
-                        <svg class="analytics-one" style="width: 250px; height:250px;">
-                            <circle r="121" cx="50%" cy="50%" pathlength="100"/>
+                        <svg id="ByNamee" class="analytics-one" style="width: 250px; height:250px;">
+                            <!-- <circle r="121" cx="50%" cy="50%" pathlength="100"/>
                             <circle r="79" cx="50%" cy="50%" pathlength="100"/>
-                            <circle r="100" cx="50%" cy="50%" pathlength="100"/>
+                            <circle r="100" cx="50%" cy="50%" pathlength="100"/> -->
                         </svg>
                         <!-- Gráfico circular -->
                         <!-- Texto descripción -->
                         <div class="main__statistics-circlegraphics-text">
-                            <h3>Análisis escrito</h3>
+                            <h3>Análisis de gastos totales</h3>
+                            <h3>**% de los ingresos totales</h3>
                             <li>item1</li>
                             <li>item1</li>
                             <li>item1</li>
@@ -70,7 +72,7 @@
                     </div>
                     <div class="ByClass">
                         <!-- Gráfico circular -->
-                        <svg class="analytics-one" style="width: 250px; height:250px;">
+                        <svg id="svgGraphic2" class="analytics-one" style="width: 250px; height:250px;">
                             <circle r="121" cx="50%" cy="50%" pathlength="100"/>
                             <circle r="79" cx="50%" cy="50%" pathlength="100"/>
                             <circle r="100" cx="50%" cy="50%" pathlength="100"/>
@@ -118,9 +120,12 @@
                 </div>
             </div>
         </div>
+        <main>
         <div class="main__calendar">
             <!-- Calendario -->
             <h2>Ingreso de datos</h2>
+
+            <input type="number" placeholder="Ingrese monto a administrar" id="monto">
 
             <div class="main__calendar-title">
                 <div class="titulo">
@@ -135,21 +140,29 @@
             </div>
 
             <div class="main__calendar-sections">
-                <div class="item">
-                    <input type="text" placeholder="Nombre" id="nombre">
-                </div>
-                <div class="item">
-                    <input type="text" placeholder="Precio" id="precio">
-                </div>
-                <div class="item">
-                    <input type="text" placeholder="Clase" id="clase">
-                </div>
+                <form id="formulario">
+                    <div class="item">
+                        <input type="text" placeholder="Nombre" id="nombre">
+                    </div>
+                    <div class="item">
+                        <input type="text" placeholder="Precio" id="precio">
+                    </div>
+                    <div class="item">
+                        <input type="text" placeholder="Clase" id="clase">
+                    </div>
+                </form>
             </div>
             <!-- Calendario -->
         </div>
+        <div class="submitbutton">
+            <button type="submit" id="submitbutton">
+                Submit
+            </button>
+        </div>
+    </main>
     </div>
     
 
-<!--     <script src="./app.js"></script> -->
+    <script src="./practica.js"></script>
 </body>
 </html>

@@ -30,7 +30,7 @@
         text-align: left;
         .main__statistics-circlegraphics{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-evenly;
             border: 2px solid black;
             border-radius: 20px;
@@ -53,24 +53,6 @@
                 margin: 30px 0 30px 20px;
                 .main__statistics-circlegraphics-text{
                     margin-left: 50px;
-                }
-            }
-            svg{
-                circle{
-                    fill: none;
-                    stroke: $font-color;
-                    stroke-width: 2px;
-                    stroke-dasharray: 100, 0;
-                    transform-origin: 50%;
-                    transform: rotate(-90deg);
-                }
-                circle:nth-child(3){
-                    fill: none;
-                    stroke: #145866;
-                    stroke-width: 40px;
-                    stroke-dasharray: 100, 0;
-                    transform-origin: 50%;
-                    transform: rotate(-90deg);
                 }
             }
         }
@@ -134,8 +116,22 @@
                 border: 1px solid black;
                 border-radius: 10px;
                 text-align: center;
-                color: $font-color;
             }
         }
+    }
+}
+#submitbutton{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
+    button{
+        padding: 5px 30px;
+        background-color: darkcyan;
+        color: $font-color;
+        font-family: Arial;
+        font-weight: bold;
+        box-shadow: whitesmoke  40 0 10 0;
+        border: 2px solid whitesmoke;
+        border-radius: 7px;
     }
 }

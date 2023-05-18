@@ -1,25 +1,25 @@
 
 //Función creadora de cuenta
- function cuenta(nombre, apellido, monto){
+/*  function cuenta(nombre, apellido, monto){
     this.nombre = nombre
     this.apellido = apellido
     this.monto = monto
 }
 cuenta()
-
-const cuentaUsuario = new cuenta(prompt(`Bienvenido! Ingrese su nombre`), 
+ */
+/* const cuentaUsuario = new cuenta(prompt(`Bienvenido! Ingrese su nombre`), 
 prompt(`Perfecto! Ingresa tu apellido`), 
 Number(prompt(`Ingresa el monto de dinero que quieres administrar`)))
-console.log(cuentaUsuario) 
+console.log(cuentaUsuario)  */
 
 //consigna
-alert(`La consigna es la siguiente, ${cuentaUsuario.nombre}`)
+/* alert(`La consigna es la siguiente, ${cuentaUsuario.nombre}`)
 alert(`Ingresas el nombre que le quieras asignar a tus gastos y luego, el monto de dinero que cuesta. Por ejemplo: "Alquiler".`)
-
+ */
 
 //Ciclo: genera un array con las deudas que el usuario quiera
-console.log("lista de deudas:")
-const deudas = [];
+/* console.log("lista de deudas:") */
+/* const deudas = [];
 
 while(true){
     let tituloDeuda = prompt(`Ingrese titulo de su deuda o escriba "ESC" para finalizar`);
@@ -35,15 +35,16 @@ while(true){
     };
     deudas.push(deuda);
 }
-console.log(deudas);
+console.log(deudas); */
 
 //Análisis: Se analizan porcentajes de cada deuda
-console.log("análisis de datos");
+/* console.log("análisis de datos");
 
-//gastos totales
-console.log("gastos totales")
+ *///gastos totales
+/* console.log("gastos totales")
 
-let totalGastos = 0
+ */
+/* let totalGastos = 0
 
 let sumaTotal = deudas.reduce((accum, deuda) => {
     return accum + deuda.precio
@@ -65,4 +66,81 @@ const calculoPorcentaje = deudas.map((deuda) => {
         porcentajes: porcentaje(deuda.precio, total)
     }
 })
-console.log(calculoPorcentaje)
+console.log(calculoPorcentaje) */
+
+
+/* Variable */
+/* const main__calendarSections = document.querySelector(".main__calendar-sections") */
+
+/* Evento */
+/* main__calendarSections.addEventListener("keydown", (e) =>{
+    if(e.target.value==""){
+        const newObject = document.createElement("div")
+        newObject.innerHTML =
+        `
+        <div class= "main">
+            <div class="main__calendar">
+                <div class="main__calendar-sections">
+                    <div class="item">
+                        <input type="text" placeholder="Nombre" id="nombre">
+                    </div>
+                    <div class="item">
+                        <input type="text" placeholder="Precio" id="precio">
+                    </div>
+                    <div class="item">
+                        <input type="text" placeholder="Clase" id="clase">
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+        document.body.appendChild(newObject)
+        console.log(newObject)
+    }
+}) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  function cuenta(nombre, apellido, monto){
+    this.nombre = nombre
+    this.apellido = apellido
+    this.monto = monto
+}
+cuenta()*/
+
+
+
+
+
+/* let main__calendar = document.querySelector(".main__calendar")
+
+main__calendar.addEventListener("keydown", (e)=>{
+    if(e.keyCode == 13){
+        const newObject = document.createElement("div")
+        newObject.innerHTML =
+        `
+                <div class="main__calendar-sections">
+                    <div class="item">
+                        <input type="text" placeholder="Nombre" id="nombre">
+                    </div>
+                    <div class="item">
+                        <input type="text" placeholder="Precio" id="precio">
+                    </div>
+                    <div class="item">
+                        <input type="text" placeholder="Clase" id="clase">
+                    </div>
+                </div>
+        `
+        main__calendar.appendChild(newObject)
+    }
+}) */
