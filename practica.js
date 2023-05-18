@@ -59,8 +59,8 @@ analisis.addEventListener("click", (e) => {
 
 
     
-    let porcentaje = (sumaTotal*100)/monto + '%'
-    console.log(porcentaje)
+/*     let porcentaje = (sumaTotal*100)/monto + '%'
+    console.log(porcentaje) */
 
     const graficoCircular = document.querySelector("#ByNamee")
     const graficaBordeExt = document.createElementNS(svgNS, "circle")
@@ -90,6 +90,6 @@ analisis.addEventListener("click", (e) => {
     grafica.setAttribute("r", "100")
     grafica.setAttribute("cx", "50%")
     grafica.setAttribute("cy", "50%")
-    grafica.setAttribute("style", `fill:none; stroke: whitesmoke; stroke-width: 2px; stroke-dasharray: ${sumaTotal}, ${monto-sumaTotal}; transform-origin: 50%; transform: rotate(-90deg);`)
+    grafica.setAttribute("style", `fill:none; stroke: darkcyan; stroke-width: 40px; stroke-dasharray: ${sumaTotal}, ${monto-sumaTotal}; transform-origin: 50%; transform: rotate(-90deg);`)
     graficoCircular.appendChild(grafica)
 })
