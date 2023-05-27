@@ -11,21 +11,17 @@
 
 let deudas = [];
 
+function constructor(nombre, precio, clase){
+    this.nombre = nombre,
+    this.precio = precio,
+    this.clase = clase
+}
+
+
 const submitbutton = document.querySelector("#submitbutton")
-
-
 submitbutton.addEventListener("click", (e) => {
-    const inputNombre = document.querySelector("#nombre").value;
-    const inputPrecio = parseInt(document.querySelector("#precio").value)
-    const inputClase = document.querySelector("#clase").value;
-    
-    let nuevoObjeto = {
-        nombre: inputNombre,
-        precio: inputPrecio,
-        clase: inputClase
-        
-    }
-    
+
+    let nuevoObjeto = new constructor(nombre = document.querySelector("#nombre").value, precio = parseFloat(document.querySelector("#precio").value), clase = document.querySelector("#clase").value)
     console.log(nuevoObjeto)
     
     deudas.push(nuevoObjeto)
@@ -50,17 +46,18 @@ const svgNS = "http://www.w3.org/2000/svg";
 analisis.addEventListener("click", (e) => {
     const itemsSuma = JSON.parse(localStorage.getItem("deudas"))
     console.log(itemsSuma)
-    
-    const sumaTotal = deudas.reduce((acc, deudas) => {
-        return acc += acc + deudas.precio
-    }, 0);
+
+    let sumaTotal = deudas.reduce((acc, deudas) => {
+        return acc + deudas.precio
+    }, 0)
     console.log(sumaTotal)
+
     let monto = document.querySelector("#monto").value
+    let porcentaje = (sumaTotal*100)/monto
+    console.log(porcentaje)
 
 
     
-/*     let porcentaje = (sumaTotal*100)/monto + '%'
-    console.log(porcentaje) */
 
     const graficoCircular = document.querySelector("#ByNamee")
     const graficaBordeExt = document.createElementNS(svgNS, "circle")
@@ -81,15 +78,29 @@ analisis.addEventListener("click", (e) => {
     graficaBordeInt.setAttribute("style", `fill:none; stroke: whitesmoke; stroke-width: 2px; stroke-dasharray: 100, 0; transform-origin: 50%; transform: rotate(-90deg);`)
     graficoCircular.appendChild(graficaBordeInt)
 
-    let ayudaGrafico = (monto-sumaTotal)
-    console.log(ayudaGrafico)
 
     let grafica = document.createElementNS(svgNS, "circle")
     grafica.innerHTML =
-    grafica.setAttribute("pathlength", monto)
     grafica.setAttribute("r", "100")
     grafica.setAttribute("cx", "50%")
     grafica.setAttribute("cy", "50%")
-    grafica.setAttribute("style", `fill:none; stroke: darkcyan; stroke-width: 40px; stroke-dasharray: ${sumaTotal}, ${monto-sumaTotal}; transform-origin: 50%; transform: rotate(-90deg);`)
+    grafica.setAttribute("style", `fill: none;stroke: darkcyan;stroke-width: 40px; stroke-dasharray: ${porcentaje}, 100; transform-origin: 50%; transform: rotate(-90deg);`)
+    grafica.setAttribute("class", "animacionGrafica")
     graficoCircular.appendChild(grafica)
+
+    grafica.setAttribute("pathLength", 100)
+    graficoCircular.appendChild(grafica)
+    
+    const descripcion1 = document.querySelector("#h3modificable")
+    let h3decripcion = document.createElement("h3")
+    h3decripcion.innerHTML=
+    `
+    Estás consumiendo el ${porcentaje}% de tus ingresos totales
+    `
+    descripcion1.appendChild(h3decripcion)
+    
+
+    //analisis por objeto
+
+    
 })

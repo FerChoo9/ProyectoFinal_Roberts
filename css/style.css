@@ -210,6 +210,13 @@ body {
 .main .main__statistics .main__statistics-circlegraphics .ByName .main__statistics-circlegraphics-text {
   margin-left: 50px;
 }
+.main .main__statistics .main__statistics-circlegraphics .ByName .main__statistics-circlegraphics-text circle:nth-child(3) {
+  fill: none;
+  stroke: darkcyan;
+  stroke-width: 40px;
+  transform-origin: 50%;
+  transform: rotate(-90deg);
+}
 .main .main__statistics .main__statistics-circlegraphics .ByClass {
   display: flex;
   flex-direction: row;

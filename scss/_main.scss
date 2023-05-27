@@ -44,6 +44,13 @@
                 margin: 30px 0 30px 20px;
                 .main__statistics-circlegraphics-text{
                     margin-left: 50px;
+                    circle:nth-child(3){
+                        fill: none;
+                        stroke: darkcyan;
+                        stroke-width: 40px;
+                        transform-origin: 50%;
+                        transform: rotate(-90deg);
+                    }
                 }
             }
             .ByClass{
