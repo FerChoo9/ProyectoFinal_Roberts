@@ -210,13 +210,6 @@ body {
 .main .main__statistics .main__statistics-circlegraphics .ByName .main__statistics-circlegraphics-text {
   margin-left: 50px;
 }
-.main .main__statistics .main__statistics-circlegraphics .ByName .main__statistics-circlegraphics-text circle:nth-child(3) {
-  fill: none;
-  stroke: darkcyan;
-  stroke-width: 40px;
-  transform-origin: 50%;
-  transform: rotate(-90deg);
-}
 .main .main__statistics .main__statistics-circlegraphics .ByClass {
   display: flex;
   flex-direction: row;
@@ -261,7 +254,7 @@ body {
 }
 .main__calendar h2 {
   display: flex;
-  margin: 20px auto;
+  margin: 20px 0 10px 90px;
 }
 .main__calendar .main__calendar-title {
   display: flex;
@@ -275,6 +268,9 @@ body {
   margin: 5px auto 5px auto;
   width: 90%;
 }
+.main__calendar .main__calendar-sections .item {
+  margin-bottom: 5px;
+}
 .main__calendar .main__calendar-sections .item input {
   display: flex;
   flex-direction: row;
@@ -285,13 +281,22 @@ body {
   border-radius: 10px;
   text-align: center;
 }
-
-#submitbutton {
+.main__calendar #monto {
   display: flex;
-  margin-left: 50px;
-  margin-top: 10px;
+  margin: 0 auto;
+  width: 50%;
+  height: 30px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin-bottom: 10px;
 }
-#submitbutton button {
+.main__calendar .submitbutton {
+  display: flex;
+  margin: 10px;
+}
+.main__calendar .submitbutton button {
   padding: 5px 30px;
   background-color: darkcyan;
   color: whitesmoke;

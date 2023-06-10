@@ -8,6 +8,8 @@
     <title>StudyWithFer | Home</title>
 </head>
 <body>
+    <style id="estilosAdicionales">
+    </style>
     <div class="header">
         <header>
             <h1>LetsOrganize</h1>
@@ -70,17 +72,16 @@
                     <div class="ByClass">
                         <!-- Gráfico circular -->
                         <svg id="svgGraphic2" class="analytics-one" style="width: 250px; height:250px;">
-                            <circle r="121" cx="50%" cy="50%" pathlength="100"/>
+<!--                             <circle r="121" cx="50%" cy="50%" pathlength="100"/>
                             <circle r="79" cx="50%" cy="50%" pathlength="100"/>
-                            <circle r="100" cx="50%" cy="50%" pathlength="100"/>
+                            <circle r="100" cx="50%" cy="50%" pathlength="100"/> -->
                         </svg>
                         <!-- Gráfico circular -->
                         <!-- Texto descripción -->
                         <div class="main__statistics-circlegraphics-text">
                             <h3>Análisis escrito</h3>
-                            <li>item1</li>
-                            <li>item1</li>
-                            <li>item1</li>
+                            <div class="analisisEscrito">
+                            </div>
                         </div>
                         <!-- Texto descripción -->
                     </div>
@@ -124,38 +125,31 @@
 
             <input type="text" placeholder="Ingrese monto a administrar" id="monto">
 
-            <div class="main__calendar-title">
-                <div class="titulo">
-                    <h3>Nombre</h3>
-                </div>
-                <div class="titulo">
-                    <h3>precio</h3>
-                </div>
-                <div class="titulo">
-                    <h3>Clase</h3>
-                </div>
-            </div>
 
             <div class="main__calendar-sections">
                 <form id="formulario">
                     <div class="item">
+                        <label for="nombre">Nombre</label>
                         <input type="text" placeholder="Nombre" id="nombre">
                     </div>
                     <div class="item">
+                        <label for="precio">Precio</label>
                         <input type="text" placeholder="Precio" id="precio">
                     </div>
                     <div class="item">
+                        <label for="clase">Clase</label>
                         <input type="text" placeholder="Clase" id="clase">
                     </div>
                 </form>
             </div>
+            <div class="submitbutton">
+                <button type="submit" id="submitbutton">
+                    Submit
+                </button>
+            </div>
             <!-- Calendario -->
         </div>
-        <div class="submitbutton">
-            <button type="submit" id="submitbutton">
-                Submit
-            </button>
-        </div>
+        <div class="reservadoObjetos" style="margin-top: 20px;"></div>
     </main>
     </div>
     

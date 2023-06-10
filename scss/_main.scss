@@ -44,13 +44,6 @@
                 margin: 30px 0 30px 20px;
                 .main__statistics-circlegraphics-text{
                     margin-left: 50px;
-                    circle:nth-child(3){
-                        fill: none;
-                        stroke: darkcyan;
-                        stroke-width: 40px;
-                        transform-origin: 50%;
-                        transform: rotate(-90deg);
-                    }
                 }
             }
             .ByClass{
@@ -100,7 +93,7 @@
     border-radius: 15px;
     h2{
         display: flex;
-        margin: 20px auto;
+        margin: 20px 0 10px 90px;
     }
     .main__calendar-title{
         display: flex;
@@ -114,6 +107,7 @@
         margin: 5px auto 5px auto;
         width: 90%;
         .item{
+            margin-bottom: 5px;
             input{
                 display: flex;
                 flex-direction: row;
@@ -126,19 +120,29 @@
             }
         }
     }
-}
-#submitbutton{
-    display: flex;
-    margin-left: 50px;
-    margin-top: 10px;
-    button{
-        padding: 5px 30px;
-        background-color: darkcyan;
-        color: $font-color;
-        font-family: Arial;
-        font-weight: bold;
-        box-shadow: whitesmoke  40 0 10 0;
-        border: 2px solid whitesmoke;
-        border-radius: 7px;
+    #monto{
+        display: flex;
+        margin: 0 auto;
+        width: 50%;
+        height: 30px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        margin-bottom: 10px;
+    }
+    .submitbutton{
+        display: flex;
+        margin: 10px;
+        button{
+            padding: 5px 30px;
+            background-color: darkcyan;
+            color: $font-color;
+            font-family: Arial;
+            font-weight: bold;
+            box-shadow: whitesmoke  40 0 10 0;
+            border: 2px solid whitesmoke;
+            border-radius: 7px;
+        }
     }
 }
