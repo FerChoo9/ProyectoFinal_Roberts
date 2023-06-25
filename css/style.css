@@ -159,11 +159,23 @@ body {
   padding-right: 15px;
 }
 
+.analisis1:hover {
+  background: radial-gradient(circle, rgb(92, 116, 238) 0%, darkcyan 88%);
+}
+
+.agregar:hover {
+  background: radial-gradient(circle, rgb(92, 116, 238) 0%, darkcyan 88%);
+}
+
 .main {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
+}
+.main #analisis {
+  font-family: fanwood;
+  font-size: 32px;
 }
 .main .main__message {
   display: flex;
@@ -194,10 +206,11 @@ body {
 .main .main__statistics .main__statistics-circlegraphics {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   border: 2px solid black;
   border-radius: 20px;
-  height: auto;
+  height: 350px;
   margin-bottom: 20px;
   background-color: #121212;
 }
@@ -205,7 +218,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 30px 0 30px 20px;
+  margin-top: 300px;
 }
 .main .main__statistics .main__statistics-circlegraphics .ByName .main__statistics-circlegraphics-text {
   margin-left: 50px;

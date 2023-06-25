@@ -36,10 +36,8 @@
             <div class="nav__sections">
                 <section>
                     <ul>
-                        <li class="nav__sections-item"><img src="./icons/data-analytics.png" alt="">    Análisis</li>
-                        <li class="nav__sections-item"><img src="./icons/calendar-days.png" alt="">    Calendario</li>
-                        <li class="nav__Sections-item"><img src="./icons/lista-de-tareas.png" alt="">    Tareas</li>
-                        <li class="nav__sections-item"><img src="./icons/boton-circular-plus.png" alt="">agregar</li>
+                        <li class="nav__sections-item analisis1"><img src="./icons/data-analytics.png" alt="">    Análisis</li>
+                        <li class="nav__sections-item agregar"><img src="./icons/boton-circular-plus.png" alt="">agregar</li>
                     </ul>
                 </section>
             </div>
@@ -52,7 +50,7 @@
                 <!-- Mensaje -->
             </div>
             <div class="main__statistics">
-                <button id="analisis">Análisis</button>
+                <button id="analisis" style="margin-bottom: 10px; background-color: darkcyan; padding-top:10px; padding-bottom: 10px; border: 1px solid black; border-radius: 15px;">Análisis</button>
                 <div class="main__statistics-circlegraphics">
                     <div class="ByName">
                         <!-- Gráfico circular -->
@@ -78,40 +76,15 @@
                         </svg>
                         <!-- Gráfico circular -->
                         <!-- Texto descripción -->
-                        <div class="main__statistics-circlegraphics-text">
-                            <h3>Análisis escrito</h3>
-                            <div class="analisisEscrito">
-                            </div>
-                        </div>
                         <!-- Texto descripción -->
                     </div>
                 </div>
                 <div class="main__statistics-bargraphics">
                     <!-- Gráficos de barras -->
                     <div class="bargraphics">
-                        <h2>Gráfico de barras</h2>
+                        <h2 style="margin-top: 20px;">Gráfico de barras por nombre</h2>
 
                         <div class="bargraphics-analytics">
-                            <div class="bargraphics-analytics-item">
-                                <div class="bargraphics-analytics-text">
-                                    <span>item1</span>
-                                    <span>**%</span>
-                                </div>
-                                <div class="bargraphics-analytics-bar">
-                                    <div id="item1-bar">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bargraphics-analytics-item">
-                                <div class="bargraphics-analytics-text">
-                                    <span>Item2</span>
-                                    <span>**%</span>
-                                </div>
-                                <div class="bargraphics-analytics-bar">
-                                    <div id="item2-bar">
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- Gráficos de barras -->
@@ -135,10 +108,6 @@
                     <div class="item">
                         <label for="precio">Precio</label>
                         <input type="text" placeholder="Precio" id="precio">
-                    </div>
-                    <div class="item">
-                        <label for="clase">Clase</label>
-                        <input type="text" placeholder="Clase" id="clase">
                     </div>
                 </form>
             </div>

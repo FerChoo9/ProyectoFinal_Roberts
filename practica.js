@@ -19,6 +19,8 @@ function constructor(nombre, precio, clase){
 
 let analisisObjetos = [];
 
+let monto = parseFloat(document.querySelector("#monto"))
+
 
 const submitbutton = document.querySelector("#submitbutton")
 submitbutton.addEventListener("click", (e) => {
@@ -132,68 +134,37 @@ analisis.addEventListener("click", (e) => {
     `
     descripcion1.appendChild(h3decripcion)
     
+    //Gráfico de barras
 
-    //analisis por objeto
-
-    
     deudas.forEach(deudas => {
-        let objetoColores = {color: "#"+Math.ceil(Math.random()*1000000), precio: deudas.precio, porcentaje: Math.round(deudas.precio*100/(document.querySelector("#monto").value))}
-        console.log(objetoColores)
-        analisisObjetos.push(objetoColores)
+
+        let graficoBarras = document.querySelector(".bargraphics-analytics")
+        let nuevaBarra = document.createElement("div")
+        nuevaBarra.innerHTML=
+        `
+        <div style="display: flex; margin-bottom: 10px;">
+            <h3 style="margin: 0 40px 0 40px;">${deudas.nombre}</h3>
+            <h3>${Math.round(deudas.precio*100/monto)}%</h3>
+        </div>
+        <div style="width: ${deudas.precio*100/monto}%; height: 10px; background-color: darkcyan; margin-bottom: 10px; margin-left: 30px;">
+        </div>
+        `
+        graficoBarras.appendChild(nuevaBarra)
     })
 
-    analisisObjetos.forEach(analisisObjetos => {
-        let nuevoContenedor = document.createElement("div")
-        let nuevoAnalisis = document.createElement("ul")
-        nuevoAnalisis.setAttribute("style", `display: flex; list-style: none;`)
-        nuevoAnalisis.innerHTML=
+    deudas.forEach(deudas => {
+
+        let graficoBarrasClase = document.querySelector(".bargraphics-class")
+        let nuevaBarraClase = document.createElement("div")
+        nuevaBarraClase.innerHTML=
         `
-        <li><div style="width: 20px; height: 20px; background-color: ${analisisObjetos.color};margin-bottom: 10px; margin-right: 20px;"></div></li>
-        <li style="margin-bottom: 10px; margin-right: 20px;">${analisisObjetos.precio}</li>
-        <li style="margin-bottom: 10px; margin-right: 20px;">${analisisObjetos.porcentaje}%</li>
+        <div style="display: flex; margin-bottom: 10px;">
+            <h3 style="margin: 0 40px 0 40px;">${deudas.nombre}</h3>
+            <h3>${Math.round(deudas.precio*100/monto)}%</h3>
+        </div>
+        <div style="width: ${deudas.precio*100/monto}%; height: 10px; background-color: darkcyan; margin-bottom: 10px; margin-left: 30px;">
+        </div>
         `
-        document.querySelector(".analisisEscrito").appendChild(nuevoContenedor)
-        nuevoContenedor.appendChild(nuevoAnalisis)
-    })
-
-
-
-    const graficoCircular2 = document.querySelector("#svgGraphic2")
-    const graficaBordeExt2 = document.createElementNS(svgNS, "circle")
-    graficaBordeExt2.innerHTML =
-    graficaBordeExt2.setAttribute("r", "121");
-    graficaBordeExt2.setAttribute("cx", "50%"); 
-    graficaBordeExt2.setAttribute("cy", "50%");
-    graficaBordeExt2.setAttribute("pathlength", "100");
-    graficaBordeExt2.setAttribute("style", `fill:none; stroke: whitesmoke; stroke-width: 2px; stroke-dasharray: 100, 0; transform-origin: 50%; transform: rotate(-90deg);`)
-    graficoCircular2.appendChild(graficaBordeExt2)
-
-    const graficaBordeInt2 = document.createElementNS(svgNS, "circle")
-    graficaBordeInt2.innerHTML =
-    graficaBordeInt2.setAttribute("r", "79");
-    graficaBordeInt2.setAttribute("cx", "50%");
-    graficaBordeInt2.setAttribute("cy", "50%");
-    graficaBordeInt2.setAttribute("pathlength", "100");
-    graficaBordeInt2.setAttribute("style", `fill:none; stroke: whitesmoke; stroke-width: 2px; stroke-dasharray: 100, 0; transform-origin: 50%; transform: rotate(-90deg);`)
-    graficoCircular2.appendChild(graficaBordeInt2)
-
-
-    let sumaPorcentajes = analisisObjetos.reduce((acc, analisisObjetos, index) => {
-        return acc+= analisisObjetos.porcentaje*index
-    }, 0)
-
-    analisisObjetos.forEach(analisisObjetos => {
-        let nuevoGrafico = document.createElementNS(svgNS, "circle")
-
-        nuevoGrafico.innerHTML=
-        nuevoGrafico.setAttribute("r", "100")
-        nuevoGrafico.setAttribute("cx", "50%")
-        nuevoGrafico.setAttribute("cy", "50%")
-        nuevoGrafico.setAttribute("style", `fill: none; stroke: ${analisisObjetos.color}; stroke-width: 40px; stroke-dasharray: ${((analisisObjetos.porcentaje)*360)/100}, 360; transform-origin: 50%; transform: rotate(${-90+ sumaPorcentajes }deg);`)
-
-        graficoCircular2.appendChild(nuevoGrafico)
-
-        nuevoGrafico.setAttribute("pathLength", 360)
-        graficoCircular2.appendChild(nuevoGrafico)
+        graficoBarrasClase.appendChild(nuevaBarraClase)
     })
 })
