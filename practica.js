@@ -26,7 +26,7 @@ const submitbutton = document.querySelector("#submitbutton")
 submitbutton.addEventListener("click", (e) => {
     
 
-    let nuevoObjeto = new constructor(nombre = document.querySelector("#nombre").value, precio = parseFloat(document.querySelector("#precio").value), clase = document.querySelector("#clase").value)
+    let nuevoObjeto = new constructor(nombre = document.querySelector("#nombre").value, precio = parseFloat(document.querySelector("#precio").value))
     console.log(nuevoObjeto)
     
     deudas.push(nuevoObjeto)
